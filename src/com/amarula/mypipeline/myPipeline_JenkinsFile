@@ -1,0 +1,11 @@
+#!groovy
+
+import com.amarula.lib.MyLib
+
+node("internal") {
+
+    def myLib = new MyLib()
+    myLib.getSomething()
+    def options = ["name": "world"]
+    helloWorld.call(options)
+}
